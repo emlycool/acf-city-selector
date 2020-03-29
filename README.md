@@ -9,6 +9,7 @@ Welcome to the City Selector plugin, which is an extension for [Advanced Custom 
 - [Usage](#usage)
 - [Impact](#impact)
 - [Cities](#cities)
+- display data with shortcode
 - [Hooks](#hooks)
 - [Compatibility](#compatibility)
 - [Tested on](#tested)
@@ -19,6 +20,7 @@ Welcome to the City Selector plugin, which is an extension for [Advanced Custom 
 - [Credit](#credit)
 - [TO DO](#todo)
 - [Changelog](#changelog)
+
 
 <a name="version"></a>
 ### Version
