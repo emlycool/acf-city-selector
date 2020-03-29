@@ -9,7 +9,7 @@ Welcome to the City Selector plugin, which is an extension for [Advanced Custom 
 - [Usage](#usage)
 - [Impact](#impact)
 - [Cities](#cities)
-- display data with shortcode(#shortcode)
+- [Shortcode]display data with shortcode(#shortcode)
 - [Hooks](#hooks)
 - [Compatibility](#compatibility)
 - [Tested on](#tested)
@@ -93,7 +93,7 @@ This outputs:
 
     "I live in Amsterdam which is in the state Noord-Holland (NH) which lies in the country Netherlands (NL)".
 <a name="shortcode"></a>
-### Shortcode to display field
+### Shortcode 
 To display the city/ state field, add this code below to function.php file
 function location_getter ($atts){ //$field_name, $data_type
 	$default = array(
