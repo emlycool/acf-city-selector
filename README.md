@@ -9,7 +9,7 @@ Welcome to the City Selector plugin, which is an extension for [Advanced Custom 
 - [Usage](#usage)
 - [Impact](#impact)
 - [Cities](#cities)
-- display data with shortcode
+- display data with shortcode(#shortcode)
 - [Hooks](#hooks)
 - [Compatibility](#compatibility)
 - [Tested on](#tested)
@@ -92,7 +92,33 @@ Echo it as follows:
 This outputs:
 
     "I live in Amsterdam which is in the state Noord-Holland (NH) which lies in the country Netherlands (NL)".
-        
+<a name="shortcode"></a>
+### Shortcode to display field
+To display the city/ state field, add this code below to function.php file
+function location_getter ($atts){ //$field_name, $data_type
+	$default = array(
+        'data_type' => 'city',
+	    'field_name' => '', //put the default name of the field name in ACF here
+    	);
+   	$a = shortcode_atts($default, $atts);
+	$city_selector = get_field($a['field_name']);
+	// instead of creating two functions two type of data can exists, the one to extract city name or state name
+	if ($a['data_type']=="city"){
+	return $city_selector['cityName'];
+	}
+	else{
+	return $city_selector['stateName'];
+	}
+}
+//assigning the short code bro!
+add_shortcode('get_locale', 'location_getter');
+
+/**
+YOu can now use the shortcode [get_locale data_type = "city"], [get locale data type = "state"]
+or otherwise in your wordpress text editors.
+
+
+*/
 <a name="impact"></a>
 ### Impact
 
